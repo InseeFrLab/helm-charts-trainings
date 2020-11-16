@@ -39,7 +39,7 @@ spec:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.service.image.repository }}:{{ .Values.service.image.tag | default .Chart.AppVersion }}"
           command: ["/bin/sh","-c"]
-          args: ["R -e \"funcampR::launch_learn(port=3838,host='0.0.0.0',file=funcampR:::tous_les_programmes('{{ .Values.grimoire.chapitre}}.Rmd'))\""]
+          args: ["R -e \"funcampR::launch_learn(port=3838,host='0.0.0.0',file=funcampR:::tous_les_programmes('{{ .Values.grimoire.chapitre}}.Rmd','{{ .Values.grimoire.quete}}'))\""]
           imagePullPolicy: {{ .Values.service.image.pullPolicy }}
           ports:
             - name: http
