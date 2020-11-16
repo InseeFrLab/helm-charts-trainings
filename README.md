@@ -1,4 +1,4 @@
-# Helm charts Trainings
+# Helm charts trainings
 
 This collection of Helm Charts is tailored for datascientists trainings.  
 It is primarly designed to work with [Onyxia](https://github.com/inseefrlab/onyxia) but also works as a standalone Helm repository.  
