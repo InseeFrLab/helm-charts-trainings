@@ -1,0 +1,38 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "type": "object",
+    "properties": {
+        "grimoire": {
+            "description": "grimoire settings",
+            "type": "string",
+            "properties": {
+                "chapitre": {
+                    "type": "string",
+                    "description": "Chapter",
+                    "default": "chapitre1",
+                    "enum": ["chapitre1","chapitre2","chapitre3","chapitre4","chapitre5","chapitre6","chapitre7","chapitre8","chapitre9","chapitre10","chapitre11","chapitre12","chapitre13"]
+                }
+            }
+        },
+        "ingress": {
+            "type": "object",
+            "form": true,
+            "title": "Ingress Details",
+            "properties": {
+                "hostname": {
+                    "type": "string",
+                    "form": true,
+                    "title": "Hostname",
+                    "x-form": {
+                        "hidden": true
+                    },
+                    "x-generated": {
+                        "type": "externalDNS",
+                        "scope": "grimoire",
+                        "name": "ihm"
+                    }
+                }
+            }
+        }
+    }
+}
