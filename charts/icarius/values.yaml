@@ -3,7 +3,7 @@
 service:
   password: changeme
   image:
-    repository: "git-registry.lab.sspcloud.fr/funcamp-r/funcamp-r-ubuntu-solarus:latest"
+    repository: "git-registry.lab.sspcloud.fr/funcamp-r/funcamp-r-ubuntu-solarus"
     pullPolicy: IfNotPresent
     # Overrides the image tag whose default is the chart appVersion.
     tag: ""
