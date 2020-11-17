@@ -3,6 +3,17 @@ entries:
   grimoire:
   - apiVersion: v2
     appVersion: latest
+    created: "2020-11-17T00:09:31.183540483Z"
+    description: FuncampR Grimoire. A collection of R tutorials for beginners, with enigmas related to icaRius game.
+    digest: 282b633c000f79df0f66baa6235431a0f3a103aa0396f1ba04fe3c011ca88bd3
+    icon: https://upload.wikimedia.org/wikipedia/en/thumb/e/e0/WPVG_icon_2016.svg/480px-WPVG_icon_2016.svg.png
+    name: grimoire
+    type: application
+    urls:
+    - https://github.com/InseeFrLab/helm-charts-trainings/releases/download/grimoire-0.1.4/grimoire-0.1.4.tgz
+    version: 0.1.4
+  - apiVersion: v2
+    appVersion: latest
     created: "2020-11-16T23:22:40.052109791Z"
     description: FuncampR Grimoire. A collection of R tutorials for beginners, with enigmas related to icaRius game.
     digest: 6c0b4c14d5f6bdc5388f43776006aca6eaf608112afd8d20904979d6af1b490b
@@ -21,4 +32,16 @@ entries:
     urls:
     - https://github.com/InseeFrLab/helm-charts-trainings/releases/download/grimoire-0.1.2/grimoire-0.1.2.tgz
     version: 0.1.2
+  neverending:
+  - apiVersion: v2
+    appVersion: latest
+    created: "2020-11-17T00:09:31.309544998Z"
+    description: FuncampR Grimoire - Last chapter. Final part of a collection of R tutorials for beginners, with enigmas related to icaRius game.
+    digest: 0a95fbbfcd78f149f6db94da38abe6ba589869f1380592857dc8af171906e150
+    icon: https://upload.wikimedia.org/wikipedia/en/thumb/e/e0/WPVG_icon_2016.svg/480px-WPVG_icon_2016.svg.png
+    name: neverending
+    type: application
+    urls:
+    - https://github.com/InseeFrLab/helm-charts-trainings/releases/download/neverending-0.1.0/neverending-0.1.0.tgz
+    version: 0.1.0
 generated: "2020-11-16T15:53:37.389807246Z"
