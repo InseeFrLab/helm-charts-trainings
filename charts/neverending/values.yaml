@@ -2,18 +2,17 @@
 
 service:
   image:
-    repository: "git-registry.lab.sspcloud.fr/funcamp-r/funcamp-r-neverending"
-    pullPolicy: IfNotPresent
+    repository: "inseefrlab/funcamp-r-neverending"
+    pullPolicy: Always
     # Overrides the image tag whose default is the chart appVersion.
-    tag: ""
+    tag: "master"
 
 rstudio:
   user: icarius
-  password: statia  
+  password: statia
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 replicaCount: 1
-
 
 imagePullSecrets: []
 nameOverride: ""
@@ -30,10 +29,12 @@ serviceAccount:
 
 podAnnotations: {}
 
-podSecurityContext: {}
+podSecurityContext:
+  {}
   # fsGroup: 2000
 
-securityContext: {}
+securityContext:
+  {}
   # capabilities:
   #   drop:
   #   - ALL
@@ -57,7 +58,8 @@ ingress:
   #    hosts:
   #      - chart-example.local
 
-resources: {}
+resources:
+  {}
   # We usually recommend not to specify default resources and to leave this as a conscious
   # choice for the user. This also increases chances charts run on environments with little
   # resources, such as Minikube. If you do want to specify resources, uncomment the following
