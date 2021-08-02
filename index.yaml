@@ -100,4 +100,15 @@ entries:
     urls:
     - https://github.com/InseeFrLab/helm-charts-trainings/releases/download/neverending-0.1.0/neverending-0.1.0.tgz
     version: 0.1.0
+  notes:
+  - apiVersion: v2
+    appVersion: latest
+    created: "2021-08-02T15:53:26.041758021Z"
+    description: Shadow notes.
+    digest: b12b5d0359a86da8ba73d3293dd449995a9f9b34df95919806e9fbb1ea209835
+    name: notes
+    type: application
+    urls:
+    - https://github.com/InseeFrLab/helm-charts-trainings/releases/download/notes-0.0.1/notes-0.0.1.tgz
+    version: 0.0.1
 generated: "2020-11-16T15:53:37.389807246Z"
