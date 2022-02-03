@@ -46,6 +46,17 @@ entries:
   icarius:
   - apiVersion: v2
     appVersion: latest
+    created: "2022-02-03T13:02:54.080433038Z"
+    description: FuncampR Game. Serious game based on a famous RPG well known in the 90s, dedicated to R learning for beginners.
+    digest: 5f91a5860fb8c2a6d4236faa8bb670d6714077b5fedb4f379768e95fbc6a1803
+    icon: https://upload.wikimedia.org/wikipedia/en/thumb/e/e0/WPVG_icon_2016.svg/480px-WPVG_icon_2016.svg.png
+    name: icarius
+    type: application
+    urls:
+    - https://github.com/InseeFrLab/helm-charts-trainings/releases/download/icarius-0.1.3/icarius-0.1.3.tgz
+    version: 0.1.3
+  - apiVersion: v2
+    appVersion: latest
     created: "2021-02-10T18:36:51.343945982Z"
     description: FuncampR Game. Serious game based on a famous RPG well known in the 90s, dedicated to R learning for beginners.
     digest: c95487c2047c51ec157a7a148fdf2293b1740f5087f3a7e8d0838e04a6593f25
