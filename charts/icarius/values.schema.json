@@ -11,7 +11,7 @@
                     "description": "Password",
                     "default": "changeme",
                     "x-form": {
-                        "value": "{{user.password}}"
+                        "value": "{{project.password}}"
                     }
                 }
             }
@@ -26,12 +26,8 @@
                     "form": true,
                     "title": "Hostname",
                     "x-form": {
-                        "hidden": true
-                    },
-                    "x-generated": {
-                        "type": "externalDNS",
-                        "scope": "icarius",
-                        "name": "ihm"
+                        "hidden": true,
+                        "value": "{{project.id}}-{{k8s.randomSubdomain}}.{{k8s.domain}}"
                     }
                 }
             }
