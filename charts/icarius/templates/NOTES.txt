@@ -1,4 +1,4 @@
 {{- if .Values.ingress.enabled }}
 - You can connect to this Ubuntu Desktop with your browser using this [link](http{{ if $.Values.ingress.tls }}s{{ end }}://{{ .Values.ingress.hostname }})
 {{- end }}
-- The password is **{{ .Values.security.password }}**
+- The password is **{{ .Values.service.password }}**

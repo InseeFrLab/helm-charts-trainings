@@ -12,6 +12,9 @@
                     "default": "changeme",
                     "x-form": {
                         "value": "{{project.password}}"
+                    },
+                    "x-onyxia": {
+                      "overwriteDefaultWith": "{{project.password}}"
                     }
                 }
             }
@@ -28,6 +31,10 @@
                     "x-form": {
                         "hidden": true,
                         "value": "{{project.id}}-{{k8s.randomSubdomain}}.{{k8s.domain}}"
+                    },
+                    "x-onyxia": {
+                      "hidden": true,
+                      "overwriteDefaultWith": "{{project.id}}-{{k8s.randomSubdomain}}-0.{{k8s.domain}}"
                     }
                 }
             }
