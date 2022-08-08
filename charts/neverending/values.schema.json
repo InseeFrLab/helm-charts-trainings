@@ -2,6 +2,23 @@
     "$schema": "http://json-schema.org/schema#",
     "type": "object",
     "properties": {
+        "service": {
+            "description": "Ubuntu specific configuration",
+            "type": "object",
+            "properties": {
+                "password": {
+                    "type": "string",
+                    "description": "Password",
+                    "default": "changeme",
+                    "x-form": {
+                        "value": "{{project.password}}"
+                    },
+                    "x-onyxia": {
+                      "overwriteDefaultWith": "{{project.password}}"
+                    }
+                }
+            }
+        },
         "ingress": {
             "type": "object",
             "form": true,
