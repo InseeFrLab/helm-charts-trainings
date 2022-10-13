@@ -135,6 +135,17 @@ entries:
   neverending:
   - apiVersion: v2
     appVersion: latest
+    created: "2022-10-13T15:28:48.111561137Z"
+    description: FuncampR Grimoire - Last chapter. Final part of a collection of R tutorials for beginners, with enigmas related to icaRius game.
+    digest: acb21b30b95e1f2c2f4864f4d7bcd732761bf48317327393a4a5d48cb7af4339
+    icon: https://upload.wikimedia.org/wikipedia/en/thumb/e/e0/WPVG_icon_2016.svg/480px-WPVG_icon_2016.svg.png
+    name: neverending
+    type: application
+    urls:
+    - https://github.com/InseeFrLab/helm-charts-trainings/releases/download/neverending-0.2.0/neverending-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
+    appVersion: latest
     created: "2022-08-08T09:05:57.128834223Z"
     description: FuncampR Grimoire - Last chapter. Final part of a collection of R tutorials for beginners, with enigmas related to icaRius game.
     digest: e5b9fd2f02be60e80ed8906b94b46697909ad332eb88b51f76c7c434545bfc23
