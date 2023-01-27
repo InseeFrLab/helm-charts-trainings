@@ -16,7 +16,8 @@
                   "type": "string",
                   "description": "Chapitre",
                   "default": "Grimoire_IGoR",
-                  "enum": ["Grimoire_IGoR","Spellbook_IGoR"]
+                  "render": "list",
+                  "listEnum": ["Grimoire_IGoR","Spellbook_IGoR"]
                 }
             }
         },
