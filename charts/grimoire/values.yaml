@@ -6,14 +6,13 @@ service:
     pullPolicy: Always
     # Overrides the image tag whose default is the chart appVersion.
     tag: "master"
-  
+
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 replicaCount: 1
 
 grimoire:
   chapitre: "chapitre1"
-
 
 imagePullSecrets: []
 nameOverride: ""
@@ -30,10 +29,12 @@ serviceAccount:
 
 podAnnotations: {}
 
-podSecurityContext: {}
+podSecurityContext:
+  {}
   # fsGroup: 2000
 
-securityContext: {}
+securityContext:
+  {}
   # capabilities:
   #   drop:
   #   - ALL
@@ -50,14 +51,16 @@ ingress:
   enabled: true
   tls: true
   ingressClassName: ""
-  annotations: []
-    # kubernetes.io/tls-acme: "true"
+  annotations:
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "3600"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "3600"
   hostname: chart-example.local
   #  - secretName: chart-example-tls
   #    hosts:
   #      - chart-example.local
 
-resources: {}
+resources:
+  {}
   # We usually recommend not to specify default resources and to leave this as a conscious
   # choice for the user. This also increases chances charts run on environments with little
   # resources, such as Minikube. If you do want to specify resources, uncomment the following
