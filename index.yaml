@@ -3,6 +3,17 @@ entries:
   grimoire:
   - apiVersion: v2
     appVersion: latest
+    created: "2023-09-25T16:29:31.264156158Z"
+    description: FuncampR Grimoire. A collection of R tutorials for beginners, with enigmas related to icaRius game.
+    digest: 03de74f9c908271263b1f6192f7593810a78fff2bed66803a40e8c86cd11cbd7
+    icon: https://upload.wikimedia.org/wikipedia/en/thumb/e/e0/WPVG_icon_2016.svg/480px-WPVG_icon_2016.svg.png
+    name: grimoire
+    type: application
+    urls:
+    - https://github.com/InseeFrLab/helm-charts-trainings/releases/download/grimoire-0.3.3/grimoire-0.3.3.tgz
+    version: 0.3.3
+  - apiVersion: v2
+    appVersion: latest
     created: "2023-05-24T08:16:40.179092162Z"
     description: FuncampR Grimoire. A collection of R tutorials for beginners, with enigmas related to icaRius game.
     digest: c350c227cec7775ec9cac88d5f7239ae16d64c2a1e3f33cabceaacd1e6502a1b
