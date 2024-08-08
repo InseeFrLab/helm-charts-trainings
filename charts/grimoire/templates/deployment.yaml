@@ -1,19 +1,18 @@
-{{- $fullName := include "grimoire.fullname" . -}}
+{{- $fullName := include "library-chart.fullname" . -}}
 {{- $volumeName := printf "%s-%s" $fullName "data" | trunc 63 | trimSuffix "-" -}}
-{{- $initContainerName := printf "%s-%s" $fullName "init-data" | trunc 63 | trimSuffix "-" -}}
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "grimoire.fullname" . }}
+  name: {{ include "library-chart.fullname" . }}
   labels:
-    {{- include "grimoire.labels" . | nindent 4 }}
+    {{- include "library-chart.labels" . | nindent 4 }}
 spec:
 {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
 {{- end }}
   selector:
     matchLabels:
-      {{- include "grimoire.selectorLabels" . | nindent 6 }}
+      {{- include "library-chart.selectorLabels" . | nindent 6 }}
   template:
     metadata:
     {{- with .Values.podAnnotations }}
@@ -21,7 +20,7 @@ spec:
         {{- toYaml . | nindent 8 }}
     {{- end }}
       labels:
-        {{- include "grimoire.selectorLabels" . | nindent 8 }}
+        {{- include "library-chart.selectorLabels" . | nindent 8 }}
     spec:
       volumes:
         - name: {{$volumeName}}
@@ -30,7 +29,7 @@ spec:
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      serviceAccountName: {{ include "grimoire.serviceAccountName" . }}
+      serviceAccountName: {{ include "library-chart.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
@@ -44,15 +43,19 @@ spec:
           ports:
             - name: http
               containerPort: 3838
-              protocol: TCP
           livenessProbe:
             httpGet:
               path: /
-              port: http
+              port: {{ .Values.networking.service.port }}
           readinessProbe:
             httpGet:
               path: /
-              port: http
+              port: {{ .Values.networking.service.port }}
+          startupProbe:
+            httpGet:
+              path: /
+              port: {{ .Values.networking.service.port }}
+            {{- toYaml .Values.startupProbe | nindent 12 }} 
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           volumeMounts:
